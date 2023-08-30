@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #081b29;
+    color: #ededed;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 15vh;
+    padding: 1.2vh 10%;
+    background: #081b29;
+    box-shadow: 0px .9vw 2.5vw 0px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.text-logo {
+    font-size: 2.2vw;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navigation {
+    display: flex;
+
+    & a {
+        font-size: 1.1vw;
+        color: #ededed;
+        text-decoration: none;
+        font-weight: 500;
+        margin-left: 4vw;
+        transition: hover .5s;
+    }
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: #00abf0;
+}
+
+#home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+.home-content {
+    max-width: 50%;
+
+    & h1 {
+        font-size: 3vw;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: .1vw;
+    }
+
+    & h3 {
+        font-size: 1.8vw;
+        font-weight: 700;
+        color: #00abf0;
+    }
+
+    & p {
+        font-size: .9vw;
+        margin: 2vw 0 4vw;
+    }
+}
+
+.btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 20vw;
+    height: 2.8vw;
+}
+
+.btn-box a i {
+    font-size: 1.3vw;
+}
+
+.btn-box a {
+    position: relative;
+    width: 9vw;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #00abf0;
+    border: .14vw solid #00abf0;
+    border-radius: .4vw;
+    font-size: 1vw;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: .08vw;
+    z-index: 1;
+    overflow: hidden;
+    transition: hover .5s;
+}
+
+.btn-box a:hover {
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2):hover {
+    color: #081b29;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #00abf0;
+}
+
+.btn-box a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-image {
+    width: 40%;
+}
+
+.home-image-background {
+    position: absolute;
+    right: 1%;
+    z-index: -1;
+    width: 50%;
+}
+
+#colectivo {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    background: #ededed;
+
+}
+
+.colectivo-content {
+    max-width: 60%;
+    padding-right: 2vw;
+
+    & h2 {
+        font-size: 3vw;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: .1vw;
+        color: #00abf0;
+    }
+    
+    & p {
+        font-size: 1vw;
+        margin-top: .5vw;
+        color: black;
+    }
+}
+
+.colectivo-image {
+    width: 35%;
+    transition: all .2s;
+}
+
+.colectivo-image:hover {
+    width: 38%;
+    transform: translateX(-3%);
+}
+
+#finalidad {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    background: url("/images/pintura-abstracta-multicolor-ia-generativa-azul-amarillo-brillante.jpg") center;
+    background-size: cover;
+}
+
+.finalidad-content {
+    padding: 4vw 3vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.finalidad-child {
+    width: 40%;
+    border-radius: 10%;
+    
+
+    & h2 {
+        font-size: 2vw;
+        margin-bottom: .7vw;
+        text-shadow: .1vw .1vw .8vw #081b29, 
+                    .1vw .1vw 1vw #081b29;
+    }
+
+    & p {
+        font-size: 1.1vw;
+        text-shadow: .1vw .1vw .7vw #081b29, 
+                    .1vw .1vw .7vw #081b29,
+                    .1vw .1vw .75vw #081b29,
+                    .1vw .1vw .8vw #081b29, 
+                    .1vw .1vw .85vw #081b29, 
+                    .1vw .1vw .9vw #081b29, 
+                    .1vw .1vw 1vw #081b29, 
+                    .1vw .1vw 1.5vw #081b29;
+    }
+}
+
+#contacto {
+    height: 15vh;
+    padding: 1.2vh 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-contacto {
+    display: flex;
+
+    & h4 {
+        display: inline-block;
+        font-size: 1.2vw;
+        letter-spacing: .07vw;
+        align-self: flex-end;
+        margin-right: .3vw;
+    }
+
+    & p {
+        display: inline-block;
+        font-size: 1.2vw;
+        letter-spacing: .05vw;
+        align-self: flex-end;
+    }
+}
+
+.footer-redes {
+    display: flex;
+
+    & a {
+        font-size: 1.1vw;
+        color: #ededed;
+        text-decoration: none;
+        letter-spacing: .04vw;
+        margin-left: 1vw;
+        
+        & i {
+            font-size: 1.5vw;
+            margin-right: .3vw;
+            vertical-align: middle;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#carrousel-galery {
+    width: 100%;
+    padding: 2% 0;
+    display: grid;
+    grid-template-rows: 45vw 5vw;
+    grid-template-columns: 45% repeat(5, 2%) 45%;
+    align-items: center;
+    justify-items: center;
+    overflow-x: hidden;
+}
+  
+#carousel {
+    grid-row: 1 / 2;
+    grid-column: 1 / 8;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 40vw;
+    --items: 5;
+    --middle: 3;
+    --position: 1;
+    pointer-events: none;
+}
+  
+div.item {
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    --r: calc(var(--position) - var(--offset));
+    --abs: max(calc(var(--r) * -1), var(--r));
+    transition: all 0.25s linear;
+    transform: rotateY(calc(-10deg * var(--r)))
+      translateX(calc(-20vw * var(--r)));
+    z-index: calc((var(--position) - var(--abs)));
+}
+  
+div.item:nth-of-type(1) {
+    --offset: 1;
+    background: url("images/Cómo-es-el-uso-de-líneas-horizontales-en-la-composición-de-fotografía.png") center;
+    background-size: cover;
+}
+div.item:nth-of-type(2) {
+    --offset: 2;
+    background: url("images/desktop-wallpaper-full-fondos-aesthetic-nes-cool-pink-aesthetic-horizontal.jpg") center;
+    background-size: cover;
+}
+div.item:nth-of-type(3) {
+    --offset: 3;
+    background: url("images/Estabilidad-en-las-fotos-de-líneas-horizontales-.png") center;
+    background-size: cover;
+}
+div.item:nth-of-type(4) {
+    --offset: 4;
+    background: url("images/Fotos-con-Lineas-horizontales.png") center;
+    background-size: cover;
+}
+div.item:nth-of-type(5) {
+    --offset: 5;
+    background: url("images/photo-1598449356475-b9f71db7d847.jpeg") center;
+    background-size: cover;
+}
+
+input {
+    width: 1vw;
+    height: 1vw;
+    border: .2vw solid #999;
+}
+  
+input:nth-of-type(1) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(1):checked ~ #carousel {
+    --position: 1;
+}
+  
+input:nth-of-type(2) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(2):checked ~ #carousel {
+    --position: 2;
+}
+  
+input:nth-of-type(3) {
+    grid-column: 4 /5;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(3):checked ~ #carousel {
+    --position: 3;
+}
+  
+input:nth-of-type(4) {
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(4):checked ~ #carousel {
+    --position: 4;
+}
+  
+input:nth-of-type(5) {
+    grid-column: 6 / 7;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(5):checked ~ #carousel {
+    --position: 5;
+}
+
+
+
+
+
+
+
+
+  @media ( orientation: portrait ) {
+    .text-logo {
+        font-size: 4vw;
+    }
+    
+    .navigation a {
+        font-size: 2vw;
+    }
+    
+    #home {
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+
+        & .home-image {
+            width: 60%;
+        }
+    }
+
+    .home-content {
+        width: 80%;
+        text-align: center;
+        margin-bottom: 2vh;
+
+        & .btn-box {
+            margin: auto;
+        }
+
+        & h1 {
+            font-size: 6vw;
+            letter-spacing: .2vw;
+        }
+    
+        & h3 {
+            font-size: 3.6vw;
+        }
+    
+        & p {
+            font-size: 1.9vw;
+            margin: 3vw 0 6vw;
+        }
+    }
+
+    .btn-box {
+        width: 36vw;
+        height: 5vw;
+    }
+    
+    .btn-box a i {
+        font-size: 2.2vw;
+    }
+    
+    .btn-box a {
+        position: relative;
+        width: 15.8vw;
+        height: 100%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background: #00abf0;
+        border: .2vw solid #00abf0;
+        border-radius: .7vw;
+        font-size: 2vw;
+        color: #081b29;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: .12vw;
+        z-index: 1;
+        overflow: hidden;
+        transition: .5s;
+    }
+
+    .home-image-background {
+        display: none;
+    }
+
+    #colectivo {
+        justify-content: center;
+    }
+
+    .colectivo-content {
+        max-width: 85%;
+        padding-right: 2vw;
+        text-align: center;
+
+        & h2 {
+            font-size: 5vw;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: .1vw;
+            color: #00abf0;
+        }
+    
+        & p {
+            font-size: 1.9vw;
+            margin-top: .5vw;
+            color: black;
+        }
+    }
+
+    .colectivo-image {
+        display: none;
+    }
+
+    .finalidad-content {
+        height: 70%;
+        flex-direction: column;
+    }
+    
+    .finalidad-child {
+        width: 70%;
+        margin: auto;
+    
+        & h2 {
+            font-size: 3.4vw;
+            margin-bottom: 1vw;
+            text-align: center;
+            text-shadow: .1vw .1vw .8vw #081b29, 
+                        .1vw .1vw 1vw #081b29;
+        }
+    
+        & p {
+            font-size: 2.2vw;
+            text-align: center;
+            text-shadow: .1vw .1vw 1.6vw #081b29, 
+                        .1vw .1vw 1.6vw #081b29, 
+                        .1vw .1vw 1.7vw #081b29, 
+                        .1vw .1vw 1.75vw #081b29, 
+                        .1vw .1vw 1.8vw #081b29;
+        }
+    }
+
+    #carrousel-galery {
+        grid-template-rows: 55vw 5vw;
+        grid-template-columns: 40% repeat(5, 4%) 40%;
+    }
+
+    input {
+        width: 2.5vw;
+        height: 2.5vw;
+        border: .5vw solid #999;
+    }
+
+    #contacto {
+        height: 15vh;
+        padding: 1.2vh 5%;
+        display: flex;
+        flex-flow: column;
+    }
+
+    .footer-contacto h4,
+    .footer-contacto p {
+        font-size: 2.2vw;
+    }
+
+    .footer-redes a {
+        font-size: 2vw;
+
+        & i {
+            font-size: 2.5vw;
+        }
+    }
+}
